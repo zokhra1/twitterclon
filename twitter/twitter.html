@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Clon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        body, html {
+         
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+        }
+        .main-container {
+          width: 100%;
+          max-width: 1256px;
+          padding-left: 3px;
+        }
+      </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bodyBg: "#000000",
+            },
+            fontFamily: {
+              customFont: ["Roboto", "sans-serif"],
+            },
+
+            borderWidth: {
+              borderWidth: "0.2px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-bodyBg customFont text-[#D9D9D9]">
+    <div class="main-container ">
+      <div class="flex">
+        <aside class="flex flex-col justify-between  w-[275px] h-lvh pb-[12px]">
+          <div>
+            <figure>
+              <img src="./img/left-aside/logo.svg" />
+            </figure>
+
+            <nav>
+              <div class="flex items-center space-x-[20px] py-[13px] pl-[13px]">
+                <img src="./img/left-aside/Home-Fill.svg" />
+                <span class="text-[19px] font-bold">Home</span>
+              </div>
+
+              <div class="flex items-center space-x-[20px] py-[13px] pl-[13px]">
+                <img src="./img/left-aside/diyes.svg" />
+                <span class="text-[19px ] font-bold">Explore</span>
+              </div>
+
+              <div
+                class="flex relative items-center space-x-[20px] py-[13px] pl-[13px]"
+              >
+                <img src="./img/left-aside/Notifications.svg" />
+                <span class="text-[19px] font-bold">Notifications</span>
+                <img
+                  class="absolute inset-y-[6px] inset-x-[2px]"
+                  src="./img/left-aside/Notification1.svg"
+                />
+              </div>
+
+              <div class="flex items-center space-x-[20px] py-[13px] pl-[13px]">
+                <img src="./img/left-aside/Messages.svg" />
+                <span class="text-[19px] font-bold">Messages</span>
+              </div>
+
+              <div class="flex items-center space-x-[20px] py-[13px] pl-[13px]">
+                <img src="./img/left-aside/Bookmarks.svg" />
+                <span class="text-[19px] font-bold">Bookmarks</span>
+              </div>
+
+              <div class="flex items-center space-x-[20px] py-[13px] pl-[13px]">
+                <img src="./img/left-aside/Lists.svg" />
+                <span class="text-[19px] font-bold">Lists</span>
+              </div>
+
+              <div class="flex items-center space-x-[20px] py-[13px] pl-[13px]">
+                <img src="./img/left-aside/body.svg" />
+                <span class="text-[19px] font-bold">Profile</span>
+              </div>
+
+              <div class="flex items-center space-x-[20px] py-[13px] pl-[13px]">
+                <img src="./img/left-aside/Group.svg" />
+                <span class="text-[19px] font-bold">More</span>
+              </div>
+            </nav>
+
+            <div>
+              <button
+                class="py-[16px] px-[86px] bg-[#1D9BF0] rounded-[52px] font-bold text-17px mr-26px"
+              >
+                Tweet
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <img class="ml-[12px]" src="./img/left-aside/Profile-Photo.svg" />
+            <div class="flex flex-col mr-[33px]">
+              <div class="flex space-x-[2px]">
+                <span class="text-[15px] font-bold">Bradley Ortiz</span>
+                <img src="./img/left-aside/Private.svg" />
+              </div>
+              <div class="text-[15px] font-bold text-[#6E767D]">@bradley_</div>
+            </div>
+            <div><img src="./img/left-aside/select.svg" /></div>
+          </div>
+        </aside>
+        <!--  main part -->
+        <div
+          class="w-[600px] py-[9px] border-l-[1px] border-[#2F3336] border-r-[1px]"
+        >
+          <div
+            class="flex justify-between pb-[15px] border-b-[1px] border-[#2F3336] pl-[15px] pr-[13px]"
+          >
+            <div class="font-bold text-[20px]">Home</div>
+            <img src="./img/left-aside/Top-Tweets.svg" />
+          </div>
+          <div
+            class="space-y-[15px] border-b-[1px] border-[#2F3336] pb-[3px] pl-[15px] pr-[13px]"
+          >
+            <div class="flex items-center">
+              <img src="./img/left-aside/Profile-Photo.svg" />
+              <span class="text-[20px] text-[#6E767D]">What’s happening?</span>
+            </div>
+            <div class="flex justify-between pl-[66px] pr-[14px]">
+              <div class="flex">
+                <img src="./img/buttons/Top-Tweet-galery.svg" />
+                <img src="./img/buttons/gif.svg" />
+                <img src="./img/buttons/chart.svg" />
+                <img src="./img/buttons/smile.svg" />
+                <img src="./img/buttons/time.svg" />
+              </div>
+              <button
+                class="py-[9px] px-[16px] bg-[#1D9BF0] rounded-[36px] opacity-50 font-bold"
+              >
+                Tweet
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-[12px] pt-[12px] items-start pl-[15px] pr-[13px] border-b-[1px] border-[#2F3336] pb-[13px]"
+          >
+            <img class="flex" src="./img/left-aside/Tweet-Profile-Photo.svg" />
+
+            <div>
+              <div class="flex mb-[5px]">
+                <span class="mr-[2px] font-bold">CNN</span
+                ><img class="mr-[4px]" src="./img/left-aside/Verified.svg" />
+                <span class="mr-[4px] font-light text-13px">@CNN</span>
+                <span class="mr-[4px] font-light text-13px">.</span>
+                <span class="mr-[4px] font-light text-13px">7m</span>
+              </div>
+              <div class="mb-[12px] text-[15px]">
+                President Joe Biden touted a new agreement reached with the
+                European Union to ease Trump-era tariffs on aluminum and steel
+                as a "major breakthrough" that would serve to both strengthen
+                the US steel industry and combat the global climate crisis.
+              </div>
+
+              <div class="flex gap-[52px]">
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Reply.svg" /><span
+                    class="font-light text-13px"
+                    >52</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Retweet.svg" /><span
+                    class="font-light text-13px"
+                    >33</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/React.svg" /><span
+                    class="font-light text-13px"
+                    >76</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Share.svg" /><span
+                    class="font-light text-13px"
+                    >66</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-[12px] pt-[12px] items-start pl-[15px] pr-[13px] border-b-[1px] border-[#2F3336] pb-[13px]"
+          >
+            <img class="flex" src="./img/left-aside/profile2.svg" />
+
+            <div>
+              <div class="flex mb-[5px]">
+                <span class="mr-[2px] font-bold">The New York Times</span
+                ><img class="mr-[4px]" src="./img/left-aside/Verified.svg" />
+                <span class="mr-[4px] font-light text-13px">@nytimes</span>
+                <span class="mr-[4px] font-light text-13px">.</span>
+                <span class="mr-[4px] font-light text-13px">7h</span>
+              </div>
+              <div class="mb-[12px] text-[15px]">
+                Gardening boomed during the pandemic. Six Black writers share
+                how it has helped them re-establish, and reimagine, a connection
+                to cultivation and the land
+              </div>
+              <div class="mb-[13px]"><img src="img/left-aside/Img.svg" /></div>
+
+              <div class="flex gap-[52px]">
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Reply.svg" /><span
+                    class="font-light text-13px"
+                    >52</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Retweet.svg" /><span
+                    class="font-light text-13px"
+                    >33</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/React.svg" /><span
+                    class="font-light text-13px"
+                    >76</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Share.svg" /><span
+                    class="font-light text-13px"
+                    >66</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-[12px] pt-[12px] items-start pl-[15px] pr-[13px] border-b-[1px] border-[#2F3336] pb-[13px]"
+          >
+            <img class="flex" src="./img/left-aside/tweet-profile.svg" />
+
+            <div>
+              <div class="flex mb-[5px] items-center">
+                <span class="mr-[2px] font-bold">Twitter</span
+                ><img class="mr-[4px]" src="./img/left-aside/Verified.svg" />
+                <span class="mr-[4px] font-light text-13px">@Twitter</span>
+                <span class="mr-[4px] font-light text-13px">.</span>
+                <span class="mr-[4px] font-light text-13px">Oct 29 </span>
+              </div>
+              <div class="mb-[12px] text-[15px]">
+                BIG NEWS lol jk still Twitter
+              </div>
+
+              <div class="flex gap-[52px]">
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Reply.svg" /><span
+                    class="font-light text-13px"
+                    >52</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Retweet.svg" /><span
+                    class="font-light text-13px"
+                    >33</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/React.svg" /><span
+                    class="font-light text-13px"
+                    >76</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Share.svg" /><span
+                    class="font-light text-13px"
+                    >66</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-[12px] pt-[12px] items-start pl-[15px] pr-[13px] border-b-[1px] border-[#2F3336] pb-[13px]"
+          >
+            <img class="flex" src="./img/left-aside/tweet-profile.svg" />
+
+            <div>
+              <div class="flex mb-[5px] items-center">
+                <span class="mr-[2px] font-bold">Twitter</span
+                ><img class="mr-[4px]" src="./img/left-aside/Verified.svg" />
+                <span class="mr-[4px] font-light text-13px">@Twitter</span>
+                <span class="mr-[4px] font-light text-13px">.</span>
+                <span class="mr-[4px] font-light text-13px">Oct 23 </span>
+              </div>
+              <div class="mb-[12px] text-[15px]">hello literally everyone</div>
+
+              <div class="flex gap-[52px]">
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Reply.svg" /><span
+                    class="font-light text-13px"
+                    >52</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Retweet.svg" /><span
+                    class="font-light text-13px"
+                    >33</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/React.svg" /><span
+                    class="font-light text-13px"
+                    >76</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Share.svg" /><span
+                    class="font-light text-13px"
+                    >66</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-[12px] pt-[12px] items-start pl-[15px] pr-[13px]"
+          >
+            <img class="flex" src="./img/left-aside/tweet-profile.svg" />
+
+            <div>
+              <div class="flex mb-[5px] items-center">
+                <span class="mr-[2px] font-bold">Twitter</span
+                ><img class="mr-[4px]" src="./img/left-aside/Verified.svg" />
+                <span class="mr-[4px] font-light text-13px">@Twitter</span>
+                <span class="mr-[4px] font-light text-13px">.</span>
+                <span class="mr-[4px] font-light text-13px">Oct 14 </span>
+              </div>
+              <div class="mb-[12px] text-[15px]">hello literally everyone</div>
+
+              <div class="flex gap-[52px]">
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Reply.svg" /><span
+                    class="font-light text-13px"
+                    >12</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Retweet.svg" /><span
+                    class="font-light text-13px"
+                    >83</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/React.svg" /><span
+                    class="font-light text-13px"
+                    >36</span
+                  >
+                </div>
+                <div class="flex gap-[12px]">
+                  <img src="./img/left-aside/Share.svg" /><span
+                    class="font-light text-13px"
+                    >61</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aside right -->
+        <aside class="w-[360px] ml-[30px] pt-[6px] pr-[10px]">
+          <div class="relative w-full mb-[12px]">
+            <img
+              class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+              src="./img/buttons/search.svg"
+            />
+            <path
+              d="M10 2a8 8 0 100 16 8 8 0 000-16zm-7 8a7 7 0 1112.93 4.55l5.3 5.3a1 1 0 01-1.42 1.42l-5.3-5.3A7 7 0 013 10z"
+            />
+
+            <input
+              type="text"
+              placeholder="Search Twitter"
+              class="w-full pl-10 pr-4 h-[42px] rounded-[42px] bg-[#202327] text-[15px] focus:outline-none focus:bg-gray-700 focus:text-white"
+            />
+          </div>
+
+          <!-- Trends for you Section -->
+          <div class="bg-[#202327] pt-[12px] pl-[16px] rounded-[15px] mb-[16px]">
+            <div class="flex  items-center mb-4">
+              <h2 class="text-[#D9D9D9] text-[19px] font-bold mr-[146px]">Trends for you</h2>
+            <img src="./img/buttons/Settings.svg">
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between pr-[16px]">
+                <p class="text-[13px]">Trending in Turkey</p>
+                <img src="./img/buttons/More-2.svg"/>
+                </div>
+                <h3 class="font-bold text-[15px]">#SQUID</h3>
+                <p class="text-[13px]">2,066 Tweets</p>
+              </div>
+              <div>
+                <div class="flex justify-between pr-[16px]">
+                    <p class="text-[13px]">Trending in Turkey</p>
+                    <img src="./img/buttons/More-2.svg"/>
+                    </div>
+                <h3 class="font-bold text-[15px]">#SQUID</h3>
+                <p class="text-[13px]">2,066 Tweets</p>
+              </div>
+              <div>
+                <div class="flex justify-between pr-[16px]">
+                    <p class="text-[13px]">Trending in Turkey</p>
+                    <img src="./img/buttons/More-2.svg"/>
+                    </div>
+                <h3 class="font-bold text-[15px]">#SQUID</h3>
+                <p class="text-[13px]">2,066 Tweets</p>
+              </div>
+              <div>
+
+                <div class="flex justify-between pr-[16px]">
+                    <p class="text-[13px]">Trending in Turkey</p>
+                    <img src="./img/buttons/More-2.svg"/>
+                    </div>
+                <h3 class="font-bold text-[15px]">#SQUID</h3>
+                <p class="text-[13px]">2,066 Tweets</p>
+              </div>
+              <div>
+                <button class="text-[#1D9BF0] text-[15px] font-bold p-[16px]">Show more</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#202327] pt-[12px] pl-[16px] pr-[16px] rounded-xl">
+            <h2 class="text-[20px] font-bold text-[#D9D9D9]  ">Who to follow</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full" src="./img/left-aside/profile2.svg" alt="NYT">
+                        <div class="ml-3">
+                           <div class="flex"> <h3 class="font-normal text-[15px]">The New York Times </h3><img src="./img/left-aside/Verified.svg"></div>
+                            <p class="text-[13px] font-light">@nytimes</p>
+                        </div>
+                    </div>
+                    <button class="bg-[#EFF3F4] text-[#0F1419] py-[7px] px-[15px] rounded-[32px]">Follow</button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full" src="./img/left-aside/Tweet-Profile-Photo.svg" alt="CNN">
+                        <div class="ml-3">
+                          <div class="flex">  <h3 class="font-normal text-[15px]">CNN </h3> <img src="./img/left-aside/Verified.svg"></div>
+                            <p class="text-[13px] font-light">@CNN</p>
+                        </div>
+                    </div>
+                    <button class="bg-[#EFF3F4] text-[#0F1419] py-[7px] px-[15px] rounded-[32px]">Follow</button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full" src="./img/left-aside/tweet-profile.svg" alt="Twitter">
+                        <div class="ml-3">
+                          <div class="flex">  <h3 class="font-normal text-[15px]">Twitter </h3> <img src="./img/left-aside/Verified.svg"></div>
+
+                            <p class="text-[13px] font-light">@Twitter</p>
+                        </div>
+                    </div>
+                    <button class="bg-[#EFF3F4] text-[#0F1419] py-[7px] px-[15px] rounded-[32px]">Follow</button>
+                </div>
+                <div >
+                    <button class="text-[#1D9BF0] text-[15px] font-bold p-[16px]">Show more</button>
+                </div>
+            </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
